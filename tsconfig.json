@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+
+    "lib": ["es2021"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2021",
+    "noEmit": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
