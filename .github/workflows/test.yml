@@ -1,0 +1,23 @@
+name: E2E Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  detox:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm run build:ios
+      - run: npm run test:detox
+
+  playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npx playwright install
+      - run: npm run test:playwright
