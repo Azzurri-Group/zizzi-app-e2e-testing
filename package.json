@@ -1,10 +1,10 @@
 {
-  "name": "microservice-template",
+  "name": "zizzi-e2e-tests",
   "version": "1.0.0",
   "private": true,
-  "description": "A Koa-based microservice template",
+  "description": "E2E testing setup for Zizzi booking app using Detox and Playwright",
   "engines": {
-    "node": "16.x.x"
+    "node": ">=16"
   },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
@@ -16,45 +16,39 @@
     "test": "jest",
     "test:watch": "jest --watch --changedSince=main",
     "test:coverage": "jest --coverage",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Azzurri-Group/microservice-template.git"
+    "test:detox": "detox test --configuration ios.sim.debug",
+    "build:ios": "expo run:ios --no-install",
+    "test:playwright": "playwright test",
+    "prepare": "husky install",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "dependencies": {
-    "@azzurri-group/logger": "^1.0.11",
-    "@koa/cors": "^3.1.0",
-    "@koa/router": "^10.1.1",
-    "config": "^3.3.6",
     "dotenv": "^10.0.0",
-    "koa": "^2.13.4",
-    "koa-helmet": "^6.1.0"
+    "expo": "^53.0.19",
+    "expo-dev-client": "~5.2.4",
+    "react": "19.0.0",
+    "react-native": "0.79.5"
   },
   "devDependencies": {
-    "@azzurri-group/eslint-config-pat-recommended": "^3.0.3",
-    "@types/config": "^0.0.40",
-    "@types/jest": "^27.0.2",
-    "@types/koa": "^2.13.4",
-    "@types/koa__cors": "^3.0.3",
-    "@types/koa__router": "^8.0.9",
-    "@types/node": "^16.11.6",
+    "@types/jest": "^29.5.3",
     "@types/prettier": "^2.4.1",
-    "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
+    "detox": "^20.11.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^15.0.0",
     "eslint-plugin-jest": "^25.2.3",
     "husky": "^7.0.4",
-    "jest": "^27.3.1",
+    "jest": "29.7.0",
     "lint-staged": "^11.2.6",
     "nodemon": "^2.0.14",
+    "playwright": "1.45.0",
     "prettier": "^2.4.1",
-    "supertest": "^6.1.6",
-    "ts-jest": "^27.0.7",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.4.0",
-    "typescript": "^4.4.4"
+    "typescript": "^5.2.0",
+    "@types/react": "~19.0.10"
   },
   "lint-staged": {
     "src/**/*.ts": [

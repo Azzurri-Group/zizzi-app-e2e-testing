@@ -1,15 +1,8 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  collectCoverageFrom: ['src/**/*.ts'],
-  coveragePathIgnorePatterns: ['src/server.ts'],
-  coverageThreshold: {
-    global: {
-      statements: 50,
-      branches: 50,
-      functions: 50,
-      lines: 50,
-    },
-  },
+  testMatch: ['<rootDir>/src/e2e/tests/**/*.e2e.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/e2e/support/setup.js'],
+  verbose: true
 };
