@@ -1,0 +1,7 @@
+{
+  "preset": "jest",
+  "testEnvironment": "node",
+  "testRunner": "jest-circus/runner",
+  "setupFilesAfterEnv": ["./support/setup.js"],
+  "testMatch": ["**/*.e2e.ts"]
+}

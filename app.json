@@ -1,8 +1,0 @@
-{
-  "ios": {
-    "bundleIdentifier": "com.bogdanand.zizzi-e2e-tests"
-  },
-  "android": {
-    "package": "com.bogdanand.zizzie2etests"
-  }
-}

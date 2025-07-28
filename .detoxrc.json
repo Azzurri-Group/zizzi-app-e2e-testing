@@ -1,15 +1,10 @@
 {
-  "testRunner": {
-    "args": {
-      "config": "jest.config.js"
-    },
-    "nodeModulesBinDir": "node_modules/.bin",
-    "type": "jest"
-  },
+  "testRunner": "jest",
+  "runnerConfig": "jest.config.js",
   "apps": {
     "zizziApp.ios": {
       "type": "ios.app",
-      "binaryPath": "../zizzi-loyalty-app/ios/build/ZizziLoyaltyApp/Build/Products/Debug-iphonesimulator/ZizziLoyaltyApp.app",
+      "binaryPath": "/Users/bop/Library/Developer/Xcode/DerivedData/ZillionairesDev-blyxzhldzoaratcqyfjvsxrpomtl/Build/Products/Debug-iphonesimulator/ZillionairesDev.app",
       "build": "cd ../zizzi-loyalty-app && npx expo run:ios --no-install"
     }
   },
@@ -17,7 +12,7 @@
     "simulator": {
       "type": "ios.simulator",
       "device": {
-        "type": "iPhone 14"
+        "type": "iPhone 16"
       }
     }
   },

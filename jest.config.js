@@ -1,8 +1,11 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} */
+// jest.config.js
 module.exports = {
-  preset: 'ts-jest',
+  preset: 'jest-expo',
+  testMatch: ['**/e2e/**/*.e2e.ts'],
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/src/e2e/tests/**/*.e2e.ts'],
-  setupFilesAfterEnv: ['<rootDir>/src/e2e/support/setup.js'],
-  verbose: true
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  setupFilesAfterEnv: ['./src/e2e/support/setup.js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };

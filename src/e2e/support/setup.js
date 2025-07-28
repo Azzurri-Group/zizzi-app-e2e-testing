@@ -1,8 +1,10 @@
 // src/e2e/support/setup.js
+const detox = require('detox');
+
 beforeAll(async () => {
-  await device.launchApp({ delete: true, newInstance: true });
+  await detox.init();
 });
 
 afterAll(async () => {
-  await device.terminateApp();
+  await detox.cleanup();
 });
